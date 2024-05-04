@@ -16,3 +16,20 @@ Route::get('/google-auth/callback', [GoogleController::class, 'handleGoogleCallb
 
 Route::get('/login/google', [GoogleController::class, 'redirectToGoogle'])->name('login.google');
 Route::get('/login/google/callback', [GoogleController::class, 'handleGoogleCallback']);
+
+Route::get('/central', function () {
+    return view('central');
+});
+
+Route::get('/norte', function () {
+    return view('norte');
+});
+
+Route::get('/campus', function () {
+    return view('campus');
+});
+
+Route::get('/error', function () {
+    // Redirige a la vista 'central' en caso de error
+    return redirect('/central');
+})->name('error');

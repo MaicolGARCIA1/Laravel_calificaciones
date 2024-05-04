@@ -7,7 +7,7 @@
     <style>
         
 body {
-  background-image: url('../Imagenes/Low\ Poly.png');
+  /* background-image: url('../Imagenes/Low\ Poly.png'); */
   margin: 0; /* Asegurar que no haya espacios en blanco */
   padding: 0; /* Asegurar que no haya espacios en blanco */
 }
@@ -257,19 +257,19 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
                 <p>¿Cómo te sientes con respecto a tu experiencia? Tu opinión es muy importante para nosotros y nos ayuda a mejorar nuestros servicios. Utiliza las caras a continuación para expresar tu satisfacción:</p>
                 <div class="rating-container">
                     <button class="rating-button" onclick="handleInteractionClick('muy_bueno')" title="Muy Bueno">
-                        <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054596882504/muy_bueno.png?ex=66369fcb&is=66354e4b&hm=2a5d6dd4c7cea2f9b767201ad24313a21044f3e1d495e564a48603362215dc98&=&format=webp&quality=lossless&width=548&height=549" alt="" /><p>Muy bueno</p>
+                        <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054596882504/muy_bueno.png?ex=6637f14b&is=66369fcb&hm=2d384d702f825bc4d87d76c7b18228bf384d2790e816b3506340bf4924046dc7&=&format=webp&quality=lossless&width=548&height=549" alt="" /><p>Muy bueno</p>
                     </button>
                     <button class="rating-button" onclick="handleInteractionClick('bueno')" title="Bueno">
-                        <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054018195476/bueno.png?ex=66369fcb&is=66354e4b&hm=932f7f80de051412a11104403cbe650569eea0e315b7e3c959e974be327d35ee&=&format=webp&quality=lossless&width=549&height=549" alt="" /> <p>Bueno</p>
+                        <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054018195476/bueno.png?ex=6637f14b&is=66369fcb&hm=73038047c47a7e826238f514ab9e01656c2eef46488d27a85d49cfb4b391cf68&=&format=webp&quality=lossless&width=549&height=549" alt="" /> <p>Bueno</p>
                     </button>
                     <button class="rating-button" onclick="handleInteractionClick('neutral')" title="Neutral">
-                        <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054840410154/neutral.png?ex=66369fcb&is=66354e4b&hm=494ed50cbc7cdb2f90409f02cffc4730daeb8d1f359e4ca5c95e74af8ef3eae6&=&format=webp&quality=lossless&width=549&height=549" alt="" /> <p>Neutral</p>
+                        <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054840410154/neutral.png?ex=6637f14b&is=66369fcb&hm=8ff5b05b6bf161711771fa037f1b9df350e4277c9076ce7615c06d8b31a0f552&=&format=webp&quality=lossless&width=549&height=549" alt="" /> <p>Neutral</p>
                     </button>
                     <button class="rating-button" onclick="handleInteractionClick('malo')" title="Malo">
-                        <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054269722735/malo.png?ex=66369fcb&is=66354e4b&hm=6d8b5975d2b9eeda38cfc7843c4de08e495825984c05376517ccd8860ee737a3&=&format=webp&quality=lossless&width=549&height=549" alt="" /><p class='malo'>Malo</p>
+                        <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054269722735/malo.png?ex=6637f14b&is=66369fcb&hm=0c58e47fb43797fe6ab505e9ab4653daad355add757565132858d52581d9c277&=&format=webp&quality=lossless&width=549&height=549" alt="" /><p class='malo'>Malo</p>
                     </button>
                     <button class="rating-button" onclick="handleInteractionClick('muy_malo')" title="Muy Malo">
-                        <img src="https://media.discordapp.net/attachments/1101500368397029496/1232794694136758362/MUYPUTO.png?ex=66369e87&is=66354d07&hm=2e871cf3bd499054264ee80dc6d35418ffeafd50edd63315d6af5d50f0ae38ae&=&format=webp&quality=lossless&width=549&height=549" alt="" /> <p class='muymalo'>Muy Malo</p>
+                        <img src="https://media.discordapp.net/attachments/1101500368397029496/1232794694136758362/MUYPUTO.png?ex=6637f007&is=66369e87&hm=00257b218424873c6a4a90788abdd242b72569799425c52bc80adb6a83d87383&=&format=webp&quality=lossless&width=549&height=549" alt="" /> <p class='muymalo'>Muy Malo</p>
                     </button>
                     <!-- Agrega aquí los otros botones de calificación -->
                 </div>
@@ -303,8 +303,8 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
         }
 
         const images = [
-    'https://media.discordapp.net/attachments/1101500368397029496/1235992136982335608/IMG-20240417-WA0001.jpg?ex=663662e1&is=66351161&hm=f4861b46858eb6f6cc5f5a3cf9b488cd94c7a53eec6d60c7328b5a91f5b680f8&=&format=webp&width=549&height=549',
-    'https://media.discordapp.net/attachments/1101500368397029496/1235992098134687764/IMG-20240417-WA0007.jpg?ex=663662d7&is=66351157&hm=70a6af652b1fa2a07282b1f88d2ad676d1ff3140e99bd184d5768a5b65529eb7&=&format=webp&width=549&height=549',
+    'https://media.discordapp.net/attachments/1101500368397029496/1235992136982335608/IMG-20240417-WA0001.jpg?ex=6637b461&is=663662e1&hm=116b39f7a5a36a09a9e256358596063ad0a3f0f96aecea2c5c30e174748cea7c&=&format=webp&width=549&height=549',
+    'https://media.discordapp.net/attachments/1101500368397029496/1235992098134687764/IMG-20240417-WA0007.jpg?ex=6637b457&is=663662d7&hm=abd1022d656fa9abc55d2fd6120968e5f0797f6a118f18bfebb127542b4f2dcd&=&format=webp&width=549&height=549',
     // Agrega más URLs de imagen si es necesario
 ];
 
