@@ -14,6 +14,8 @@ class GoogleController extends Controller
 
     public function handleGoogleCallback()
     {
-        // Manejo de la respuesta de Google después de la autenticación
+        $user = Socialite::driver('google')->user();
+
+        // Aquí puedes autenticar al usuario y redirigirlo a su página de perfil, por ejemplo.
     }
 }
