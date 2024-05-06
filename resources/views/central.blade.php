@@ -252,28 +252,32 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
     <div class="interactions-container">
         <div class="interaction-section">
             <div class="card1">
-                <h2>Califica tu experiencia en La Gran Colombia</h2>
-                <p>Por favor, selecciona una de las siguientes caras para calificar tu experiencia.</p>
-                <p>¿Cómo te sientes con respecto a tu experiencia? Tu opinión es muy importante para nosotros y nos ayuda a mejorar nuestros servicios. Utiliza las caras a continuación para expresar tu satisfacción:</p>
-                <div class="rating-container">
-                    <button class="rating-button" onclick="handleInteractionClick('muy_bueno')" title="Muy Bueno">
-                        <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054596882504/muy_bueno.png?ex=6637f14b&is=66369fcb&hm=2d384d702f825bc4d87d76c7b18228bf384d2790e816b3506340bf4924046dc7&=&format=webp&quality=lossless&width=548&height=549" alt="" /><p>Muy bueno</p>
-                    </button>
-                    <button class="rating-button" onclick="handleInteractionClick('bueno')" title="Bueno">
-                        <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054018195476/bueno.png?ex=6637f14b&is=66369fcb&hm=73038047c47a7e826238f514ab9e01656c2eef46488d27a85d49cfb4b391cf68&=&format=webp&quality=lossless&width=549&height=549" alt="" /> <p>Bueno</p>
-                    </button>
-                    <button class="rating-button" onclick="handleInteractionClick('neutral')" title="Neutral">
-                        <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054840410154/neutral.png?ex=6637f14b&is=66369fcb&hm=8ff5b05b6bf161711771fa037f1b9df350e4277c9076ce7615c06d8b31a0f552&=&format=webp&quality=lossless&width=549&height=549" alt="" /> <p>Neutral</p>
-                    </button>
-                    <button class="rating-button" onclick="handleInteractionClick('malo')" title="Malo">
-                        <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054269722735/malo.png?ex=6637f14b&is=66369fcb&hm=0c58e47fb43797fe6ab505e9ab4653daad355add757565132858d52581d9c277&=&format=webp&quality=lossless&width=549&height=549" alt="" /><p class='malo'>Malo</p>
-                    </button>
-                    <button class="rating-button" onclick="handleInteractionClick('muy_malo')" title="Muy Malo">
-                        <img src="https://media.discordapp.net/attachments/1101500368397029496/1232794694136758362/MUYPUTO.png?ex=6637f007&is=66369e87&hm=00257b218424873c6a4a90788abdd242b72569799425c52bc80adb6a83d87383&=&format=webp&quality=lossless&width=549&height=549" alt="" /> <p class='muymalo'>Muy Malo</p>
-                    </button>
-                    <!-- Agrega aquí los otros botones de calificación -->
-                </div>
-                
+              <h2>Califica tu experiencia en La Gran Colombia</h2>
+              <p>Por favor, selecciona una de las siguientes caras para calificar tu experiencia.</p>
+              <p>¿Cómo te sientes con respecto a tu experiencia? Tu opinión es muy importante para nosotros y nos ayuda a mejorar nuestros servicios. Utiliza las caras a continuación para expresar tu satisfacción:</p>
+                <form id="ratingForm" action="/ratings" method="POST">
+                  @csrf <!-- Agrega el token CSRF para protección contra CSRF -->
+              
+                  <div class="rating-container">
+                      <button class="rating-button" type="button" onclick="handleInteractionClick('muy_bueno')" title="Muy Bueno">
+                          <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054596882504/muy_bueno.png?ex=6637f14b&is=66369fcb&hm=2d384d702f825bc4d87d76c7b18228bf384d2790e816b3506340bf4924046dc7&=&format=webp&quality=lossless&width=548&height=549" alt="" /><p>Muy bueno</p>
+                      </button>
+                      <button class="rating-button" type="button" onclick="handleInteractionClick('bueno')" title="Bueno">
+                          <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054018195476/bueno.png?ex=6637f14b&is=66369fcb&hm=73038047c47a7e826238f514ab9e01656c2eef46488d27a85d49cfb4b391cf68&=&format=webp&quality=lossless&width=549&height=549" alt="" /> <p>Bueno</p>
+                      </button>
+                      <button class="rating-button" type="button" onclick="handleInteractionClick('neutral')" title="Neutral">
+                          <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054840410154/neutral.png?ex=6637f14b&is=66369fcb&hm=8ff5b05b6bf161711771fa037f1b9df350e4277c9076ce7615c06d8b31a0f552&=&format=webp&quality=lossless&width=549&height=549" alt="" /> <p>Neutral</p>
+                      </button>
+                      <button class="rating-button" type="button" onclick="handleInteractionClick('malo')" title="Malo">
+                          <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054269722735/malo.png?ex=6637f14b&is=66369fcb&hm=0c58e47fb43797fe6ab505e9ab4653daad355add757565132858d52581d9c277&=&format=webp&quality=lossless&width=549&height=549" alt="" /><p class='malo'>Malo</p>
+                      </button>
+                      <button class="rating-button" type="button" onclick="handleInteractionClick('muy_malo')" title="Muy Malo">
+                          <img src="https://media.discordapp.net/attachments/1101500368397029496/1232794694136758362/MUYPUTO.png?ex=6637f007&is=66369e87&hm=00257b218424873c6a4a90788abdd242b72569799425c52bc80adb6a83d87383&=&format=webp&quality=lossless&width=549&height=549" alt="" /> <p class='muymalo'>Muy Malo</p>
+                      </button>
+                      <!-- Agrega aquí los otros botones de calificación -->
+                  </div>
+              </form>
+              
             </div>
         </div>
         <div class="card">
@@ -284,23 +288,95 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
       
     </div>
     
-    <!-- Script de JavaScript -->
-    <script>
-        function handleInteractionClick(rating) {
-            // Puedes realizar aquí cualquier lógica adicional antes de guardar la calificación
 
-            // Ejemplo: enviar la calificación a través de una petición AJAX
-            // Simulación de petición AJAX
-            setTimeout(() => {
-                // Mostrar la ventana de SweetAlert al completar la petición
+<!-- Agrega jQuery antes de tu script personalizado -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+
+var csrfToken = "{{ csrf_token() }}";
+
+function handleInteractionClick(rating) {
+    // Mapear las cadenas de texto a valores numéricos
+    switch(rating) {
+        case 'muy_bueno':
+            rating = 5;
+            break;
+        case 'bueno':
+            rating = 4;
+            break;
+        case 'neutral':
+            rating = 3;
+            break;
+        case 'malo':
+            rating = 2;
+            break;
+        case 'muy_malo':
+            rating = 1;
+            break;
+        default:
+            rating = 0; // Valor por defecto o manejar el caso en que el rating no sea válido
+            break;
+    }
+
+    // Verificar el valor de rating en la consola
+    console.log('Valor de rating:', rating);
+
+    // Verificar el token CSRF en la consola
+    console.log('Token CSRF:', csrfToken);
+
+    // Realizar la petición AJAX para guardar la calificación
+    $.ajax({
+        url: '/ratings',
+        type: 'POST',
+        data: {
+            _token: csrfToken, // Agrega el token CSRF
+            rating: rating, 
+            user_id: 1
+        },
+        dataType: 'json',
+        success: function(response) {
+            // Manejar la respuesta del servidor
+            if (response.success) {
+                // Mostrar mensaje de éxito usando SweetAlert2
                 Swal.fire({
                     title: '¡Calificación Guardada!',
                     text: `Has calificado como ${rating}`,
                     icon: 'success',
+                    confirmButtonText: 'Aceptar',
+                    timer: 3000,
+                    timerProgressBar: true
+                });
+            } else {
+                // Mostrar mensaje de error si la calificación no se guardó
+                Swal.fire({
+                    title: 'Error',
+                    text: 'No se pudo guardar la calificación. Inténtalo de nuevo.',
+                    icon: 'error',
                     confirmButtonText: 'Aceptar'
                 });
-            }, 1000); // Simulación de tiempo de respuesta de 1 segundo
+            }
+        },
+        error: function(xhr, status, error) {
+            // Manejar errores de la petición AJAX
+            console.error('Error en la solicitud AJAX:', error);
+            Swal.fire({
+                title: 'Error',
+                text: 'Ha ocurrido un error al procesar tu solicitud. Por favor, inténtalo de nuevo más tarde.',
+                icon: 'error',
+                confirmButtonText: 'Aceptar'
+            });
         }
+    });
+}
+
+
+
+</script>
+
+
+    <script>
+
+
 
         const images = [
     'https://media.discordapp.net/attachments/1101500368397029496/1235992136982335608/IMG-20240417-WA0001.jpg?ex=6637b461&is=663662e1&hm=116b39f7a5a36a09a9e256358596063ad0a3f0f96aecea2c5c30e174748cea7c&=&format=webp&width=549&height=549',

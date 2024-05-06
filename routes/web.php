@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\GoogleController;
+use App\Http\Controllers\RatingController;
 
 Route::get('/', function () {
     return redirect('/login');
@@ -33,3 +34,5 @@ Route::get('/error', function () {
     // Redirige a la vista 'central' en caso de error
     return redirect('/central');
 })->name('error');
+
+Route::post('/ratings', [RatingController::class, 'store']);

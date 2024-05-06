@@ -6,10 +6,18 @@
     <title>Iniciar sesión con Google</title>
     <!-- Agrega cualquier otro estilo o script que necesites -->
     <style>
-        .container {
-            text-align: center;
-            margin-top: 50px;
-        }
+      .container {
+        font-family: 'Georgia', serif; 
+        font-size: 16px;
+        text-align: center;
+        position: absolute; 
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        background: linear-gradient(to right, #ffffff, #f2f2f2); 
+        border-radius: 10px; 
+        padding: 50px 60px; 
+    }
 
         .button-google {
             background-color: #ffffff;
