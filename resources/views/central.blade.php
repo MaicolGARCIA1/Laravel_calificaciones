@@ -257,25 +257,24 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
               <p>¿Cómo te sientes con respecto a tu experiencia? Tu opinión es muy importante para nosotros y nos ayuda a mejorar nuestros servicios. Utiliza las caras a continuación para expresar tu satisfacción:</p>
                 <form id="ratingForm" action="/ratings" method="POST">
                   @csrf <!-- Agrega el token CSRF para protección contra CSRF -->
-              
                   <div class="rating-container">
-                      <button class="rating-button" type="button" onclick="handleInteractionClick('muy_bueno')" title="Muy Bueno">
-                          <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054596882504/muy_bueno.png?ex=6637f14b&is=66369fcb&hm=2d384d702f825bc4d87d76c7b18228bf384d2790e816b3506340bf4924046dc7&=&format=webp&quality=lossless&width=548&height=549" alt="" /><p>Muy bueno</p>
-                      </button>
-                      <button class="rating-button" type="button" onclick="handleInteractionClick('bueno')" title="Bueno">
-                          <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054018195476/bueno.png?ex=6637f14b&is=66369fcb&hm=73038047c47a7e826238f514ab9e01656c2eef46488d27a85d49cfb4b391cf68&=&format=webp&quality=lossless&width=549&height=549" alt="" /> <p>Bueno</p>
-                      </button>
-                      <button class="rating-button" type="button" onclick="handleInteractionClick('neutral')" title="Neutral">
-                          <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054840410154/neutral.png?ex=6637f14b&is=66369fcb&hm=8ff5b05b6bf161711771fa037f1b9df350e4277c9076ce7615c06d8b31a0f552&=&format=webp&quality=lossless&width=549&height=549" alt="" /> <p>Neutral</p>
-                      </button>
-                      <button class="rating-button" type="button" onclick="handleInteractionClick('malo')" title="Malo">
-                          <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054269722735/malo.png?ex=6637f14b&is=66369fcb&hm=0c58e47fb43797fe6ab505e9ab4653daad355add757565132858d52581d9c277&=&format=webp&quality=lossless&width=549&height=549" alt="" /><p class='malo'>Malo</p>
-                      </button>
-                      <button class="rating-button" type="button" onclick="handleInteractionClick('muy_malo')" title="Muy Malo">
-                          <img src="https://media.discordapp.net/attachments/1101500368397029496/1232794694136758362/MUYPUTO.png?ex=6637f007&is=66369e87&hm=00257b218424873c6a4a90788abdd242b72569799425c52bc80adb6a83d87383&=&format=webp&quality=lossless&width=549&height=549" alt="" /> <p class='muymalo'>Muy Malo</p>
-                      </button>
-                      <!-- Agrega aquí los otros botones de calificación -->
-                  </div>
+                    <button class="rating-button" type="button" onclick="handleInteractionClick('muy_bueno')" title="Muy Bueno">
+                        <img src="{{ asset('images/muybueno.png') }}" alt="Muy Bueno" /><p>Muy bueno</p>
+                    </button>
+                    <button class="rating-button" type="button" onclick="handleInteractionClick('bueno')" title="Bueno">
+                        <img src="{{ asset('images/bueno.png') }}" alt="Bueno" /> <p>Bueno</p>
+                    </button>
+                    <button class="rating-button" type="button" onclick="handleInteractionClick('neutral')" title="Neutral">
+                        <img src="{{ asset('images/neutral.png') }}" alt="Neutral" /> <p>Neutral</p>
+                    </button>
+                    <button class="rating-button" type="button" onclick="handleInteractionClick('malo')" title="Malo">
+                        <img src="{{ asset('images/malo.png') }}" alt="Malo" /><p class='malo'>Malo</p>
+                    </button>
+                    <button class="rating-button" type="button" onclick="handleInteractionClick('muy_malo')" title="Muy Malo">
+                        <img src="{{ asset('images/muymalo.png') }}" alt="Muy Malo" /> <p class='muymalo'>Muy Malo</p>
+                    </button>
+                </div>
+                
               </form>
               
             </div>
