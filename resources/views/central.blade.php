@@ -37,7 +37,7 @@ body {
   gap: 20px; /* Reducir el espacio entre las tarjetas */
   max-width: 1000px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px;
 }
 
 /* Sección de interacción */
@@ -197,6 +197,17 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   .rating-container {
     flex-direction: column;
     align-items: center; /* Centrar los elementos */
+    
+    
+  }
+  .rating-container img{
+width: 180px;
+  }
+  .interactions-container{
+    margin-left: -100px;
+  }
+  .carousel{
+    display: none;
   }
 }
 
@@ -221,7 +232,16 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   .header {
     padding: 20px 30px; /* Ajustar el padding del encabezado */
   }
-
+  .rating-container img{
+width: 120px;
+  }
+  .carousel{
+    margin-left: 200px;
+    position: fixed;
+  }
+  .carousel img{
+    width: 300px;
+  }
   .header-logo {
     width: 120px; /* Mantener el tamaño del logo */
     margin-left: 20px; /* Ajustar el margen izquierdo */
@@ -253,8 +273,9 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
         <div class="interaction-section">
             <div class="card1">
               <h2>Califica tu experiencia en La Gran Colombia</h2>
-              <p>Por favor, selecciona una de las siguientes caras para calificar tu experiencia.</p>
-              <p>¿Cómo te sientes con respecto a tu experiencia? Tu opinión es muy importante para nosotros y nos ayuda a mejorar nuestros servicios. Utiliza las caras a continuación para expresar tu satisfacción:</p>
+              <p>
+                "Califica tu experiencia en La Gran Colombia. Por favor, elige una de las caras proporcionadas para expresar tu satisfacción y ayudarnos a mejorar nuestros servicios."</p>
+              
                 <form id="ratingForm" action="/ratings" method="POST">
                   @csrf <!-- Agrega el token CSRF para protección contra CSRF -->
                   <div class="rating-container">
