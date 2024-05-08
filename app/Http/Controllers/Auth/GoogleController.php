@@ -12,7 +12,8 @@ class GoogleController extends Controller
 {
     public function redirectToGoogle()
     {
-        return Socialite::driver('google')->redirect();
+        return Socialite::driver('google')->with(["prompt" => "select_account"])->redirect();
+        // return Socialite::driver('google')->redirect();
     }
 
     public function handleGoogleCallback(Request $request)

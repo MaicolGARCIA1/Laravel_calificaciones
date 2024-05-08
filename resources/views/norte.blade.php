@@ -390,15 +390,10 @@ function handleInteractionClick(rating) {
     });
 }
 
-
-
 </script>
 
 
     <script>
-
-
-
         const images = [
     'https://media.discordapp.net/attachments/1101500368397029496/1235992136982335608/IMG-20240417-WA0001.jpg?ex=6637b461&is=663662e1&hm=116b39f7a5a36a09a9e256358596063ad0a3f0f96aecea2c5c30e174748cea7c&=&format=webp&width=549&height=549',
     'https://media.discordapp.net/attachments/1101500368397029496/1235992098134687764/IMG-20240417-WA0007.jpg?ex=6637b457&is=663662d7&hm=abd1022d656fa9abc55d2fd6120968e5f0797f6a118f18bfebb127542b4f2dcd&=&format=webp&width=549&height=549',

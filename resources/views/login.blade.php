@@ -6,18 +6,26 @@
     <title>Iniciar sesión con Google</title>
     <!-- Agrega cualquier otro estilo o script que necesites -->
     <style>
-      .container {
-        font-family: 'Georgia', serif; 
-        font-size: 16px;
-        text-align: center;
-        position: absolute; 
-        top: 50%; 
-        left: 50%; 
-        transform: translate(-50%, -50%); 
-        background: linear-gradient(to right, #ffffff, #f2f2f2); 
-        border-radius: 10px; 
-        padding: 50px 60px; 
-    }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 50px 60px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px; /* Limita el ancho máximo para mejorar la legibilidad */
+            width: 90%; /* Ajusta el ancho para que se vea bien en pantallas más pequeñas */
+            text-align: center; /* Centra el contenido */
+        }
 
         .button-google {
             background-color: #ffffff;
@@ -29,8 +37,8 @@
             padding: 10px 20px;
             cursor: pointer;
             transition: all 0.3s ease;
-            text-decoration: none; /* Agregado para que el enlace no tenga subrayado */
-            display: inline-block; /* Agregado para que el enlace se comporte como un botón */
+            text-decoration: none;
+            display: inline-block;
         }
 
         .button-google:hover {
@@ -40,8 +48,19 @@
         .button-google img {
             vertical-align: middle;
             margin-right: 10px;
-            width: 24px; /* Ajusta el ancho de la imagen según sea necesario */
-            height: auto; /* Mantén la proporción de la imagen */
+            width: 24px;
+            height: auto;
+        }
+
+        /* Oculta el texto en pantallas más pequeñas */
+        @media screen and (max-width: 360px) {
+            .container p {
+                display: none;
+            }
+
+            .button-google span {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -51,10 +70,8 @@
         <p>Por favor, inicia sesión con tu cuenta de Google para continuar.</p>
         <a href="{{ route('login.google') }}" class="button-google">
             <img src="https://cdn-icons-png.flaticon.com/128/281/281764.png" alt="Google Icon" />
-            Iniciar sesión con Google
+            <span>Iniciar sesión con Google</span> <!-- Texto del botón -->
         </a>
-        
-        
     </div>
     <!-- Agrega cualquier otro contenido o script que necesites -->
 </body>
